@@ -1,13 +1,13 @@
-// Get author of latest commits from GitHub.
+// Get my number of public repos on GitHub.
 
 async function myFetchFunction() {
   let url =
-    "https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits";
+    "https://api.github.com/users/leoncik";
   let response = await fetch(url);
 
-  let commits = await response.json(); // read response body and parse as JSON
+  let numberOfRepos = await response.json(); // read response body and parse as JSON
 
-  alert(commits[0].author.login);
+  alert(`I have made ${numberOfRepos.public_repos} public repos :D`);
 }
 
 myFetchFunction();
