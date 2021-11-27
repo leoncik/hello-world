@@ -7,3 +7,6 @@ p
     text-align: center;
     font-style: italic;
 }
+span {
+    font-weight: bold;
+}
